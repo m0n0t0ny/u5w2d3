@@ -23,12 +23,12 @@ public class ExceptionsHandler {
     return new ErrorsPayload(ex.getMessage(), LocalDateTime.now());
   }
 
-  @ExceptionHandler(Exception.class)
-  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-  public ErrorsPayload handleGenericErrors(Exception ex) {
-    ex.fillInStackTrace();
-    return new ErrorsPayload("Server error." +
-            "We apologize for the inconvenience, we're working on it!", LocalDateTime.now());
-  }
+//  @ExceptionHandler(Exception.class)
+//  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//  public ErrorsPayload handleGenericErrors(Exception ex) {
+//    ex.fillInStackTrace();
+//    return new ErrorsPayload("Server error." +
+//            "We apologize for the inconvenience, we're working on it!", LocalDateTime.now());
+//  }
 
 }

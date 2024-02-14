@@ -19,7 +19,7 @@ public class AuthorsService {
   private AuthorsDAO authorsDAO;
 
   public Page<Author> getAuthors(int pageNumber, int size, String orderBy) {
-    if (size > 100) size = 100;
+    if (size > 10) size = 10;
     Pageable pageable = PageRequest.of(pageNumber, size, Sort.by(orderBy));
     return authorsDAO.findAll(pageable);
   }

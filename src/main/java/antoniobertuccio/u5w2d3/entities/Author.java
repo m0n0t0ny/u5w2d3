@@ -14,7 +14,7 @@ import java.util.UUID;
 @Table(name = "author")
 public class Author {
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private UUID uuid;
   private String name;
   private String surname;

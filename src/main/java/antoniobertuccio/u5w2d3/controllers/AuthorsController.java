@@ -19,7 +19,7 @@ public class AuthorsController {
   @GetMapping
   public Page<Author> getAllAuthors(@RequestParam(defaultValue = "0") int page,
                                     @RequestParam(defaultValue = "10") int size,
-                                    @RequestParam(defaultValue = "id") String orderBy
+                                    @RequestParam(defaultValue = "uuid") String orderBy
   ) {
     return this.authorsService.getAuthors(page, size, orderBy);
   }

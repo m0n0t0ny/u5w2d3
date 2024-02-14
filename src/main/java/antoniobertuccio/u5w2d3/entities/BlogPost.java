@@ -21,7 +21,8 @@ public class BlogPost {
   private String cover;
   private String body;
   private int readingTime;
+
   @ManyToOne
-  @JoinColumn(name = "blogpost_id")
-  private String author;
+  @JoinColumn(name = "author_uuid")
+  private Author author;
 }
